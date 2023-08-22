@@ -1,0 +1,27 @@
+﻿@model ProductViewModel
+
+
+<title>İkinci Derece Denklem Çözümü</title>
+
+
+    <h2>İkinci Derece Denklem Çözümü</h2>
+    
+    @if (!string.IsNullOrEmpty(TempData["mesaj"] as string))
+    {
+        <p>@TempData["mesaj"]</p>
+    }
+
+    <form method="post" asp-action="IkinciDereceDenklem">
+        <label for="a">a:</label>
+        <input type="text" name="a" id="a" required><br>
+        
+        <label for="b">b:</label>
+        <input type="text" name="b" id="b" required><br>
+        
+        <label for="c">c:</label>
+        <input type="text" name="c" id="c" required><br>
+        
+        <button type="submit">Çözümü Hesapla</button>
+    </form>
+
+

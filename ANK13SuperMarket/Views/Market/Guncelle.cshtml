@@ -1,0 +1,27 @@
+﻿@using ANK13SuperMarket.Entities;
+@model Product
+<div>
+    <h1>@TempData["mesaj"]</h1>
+    <form asp-controller="Market" asp-action="Guncelle" method="post">
+        <div class="form-group">
+            <label asp-for="Name"> ÜRÜN ADI:   </label>
+            <input asp-for="Name" type="text" class="form-control" />
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Price"> ÜRÜN FİYATI:   </label>
+            <input asp-for="Price" type="number" min="1" class="form-control" />
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="IsInStock"> STOK DURUMU:   </label>
+            <input asp-for="IsInStock" />
+
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">GÜNCELLE</button>
+    </form>
+</div>
